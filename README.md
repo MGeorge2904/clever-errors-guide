@@ -1,4 +1,4 @@
-For English, see [this file](README.en.md)
+## For English, see [this file](README.en.md)
 
 # 📘 Справочник ошибок компилятора Clever
 ## Small Basic Plus — для юных программистов
