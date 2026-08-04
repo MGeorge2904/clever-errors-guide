@@ -2,9 +2,9 @@
 ## Small Basic Plus — для юных программистов
 📘 Справочник ошибок компилятора Clever (Small Basic Plus) для юных программистов. 171 ошибка с переводом, объяснением и примерами исправления. Для уроков, кружков и самостоятельного изучения. / A kid-friendly error guide for Clever compiler: 171 errors, simple explanations, and code fixes. Perfect for programming classes and self-learning.
 
-![Версия](https://img.shields.io/badge/версия-1.0-blue)
+![Версия](https://img.shields.io/badge/версия-1.0-green)
 ![Статус](https://img.shields.io/badge/статус-в_процессе_наполнения-yellow)
-![Ошибок](https://img.shields.io/badge/ошибок-171-orange)
+![Ошибок](https://img.shields.io/badge/ошибок-161-red)
 
 ## 📖 Как пользоваться справочником
 
@@ -20,7 +20,7 @@
 
 1. Открой папку с твоей программой (файл `.bp`).  
 2. Найди там **временную папку** с именем `~имя_твоей_программы` (например, `~robot`).  
-3. Зайди в неё и открой файл с именем `~имя_твоей_программы` (без расширения) в Блокноте.  
+3. Зайди в неё и открой файл с именем `~имя_твоей_программы.bp` в Блокноте или любом другом текстовом редакторе.  
 4. Найди строку и позицию, которую указал компилятор (например, `123:45`).  
 5. Посмотри на код в этом месте — именно здесь ошибка!  
 6. Вернись в свой исходный файл (`.bp`) и исправь ошибку в том же месте.
@@ -173,7 +173,7 @@
 ### 🔷 Блок 10: Ошибки с модулями .bpm и расширенные конструкции (№122–№171)
 
 **Определение функций (in/out, типы, private)**
-- [№122: После ключевого слова in/out должен быть тип переменной](#ошибка-122-после-ключевого-слова-inout-должен-быть-тип-переменной)
+- [№122: После in/out должен быть тип переменной](#ошибка-122-после-inout-должен-быть-тип-переменной)
 - [№123: Перед переменной должен быть указан тип](#ошибка-123-перед-переменной-должен-быть-указан-тип)
 - [№124: После запятой должно быть in/out](#ошибка-124-после-запятой-должно-быть-inout)
 - [№125: Перед типом переменной должно быть in/out](#ошибка-125-перед-типом-переменной-должно-быть-inout)
@@ -208,31 +208,19 @@
 - [№148: Тип свойства может быть только number, number[], string, string[]](#ошибка-148-тип-свойства-может-быть-только-number-number-string-string)
 - [№149: Свойство с таким именем уже определено](#ошибка-149-свойство-с-таким-именем-уже-определено)
 - [№150: Свойство не может быть объявлено внутри метода модуля](#ошибка-150-свойство-не-может-быть-объявлено-внутри-метода-модуля)
-- [№151: В строке допустимо только private](#ошибка-151-в-строке-допустимо-только-private)
-- [№152: Вызов приватного свойства — только в модуле-владельце](#ошибка-152-вызов-приватного-свойства-только-в-модуле-владельце)
-- [№153: Вызов приватного метода — только в модуле-владельце](#ошибка-153-вызов-приватного-метода-только-в-модуле-владельце)
-- [№154: Имя переменной в функции совпадает с именем свойства](#ошибка-154-имя-переменной-в-функции-совпадает-с-именем-свойства)
+- [№151: В строке допустимо только private](#ошибка-151-в-строке-допустимо-только-одно-ключевое-слово-private)
+- [№152: Вызов приватного свойства — только в модуле-владельце](#ошибка-152-вызов-приватного-свойства-допустим-только-в-модуле-владельце)
+- [№153: Вызов приватного метода — только в модуле-владельце](#ошибка-153-вызов-приватного-метода-допустим-только-в-модуле-владельце)
+- [№154: Имя переменной в функции совпадает с именем свойства](#ошибка-154-имя-переменной-в-функции-модуля-совпадает-с-именем-свойства)
 
-**Новые ключевые слова (Break, Continue, Return)**
-- [№155: В строке может быть только одно Break](#ошибка-155-в-строке-может-быть-только-одно-break)
-- [№156: Break — только внутри For и While](#ошибка-156-break-только-внутри-for-и-while)
-- [№157: В строке может быть только одно Continue](#ошибка-157-в-строке-может-быть-только-одно-continue)
-- [№158: Continue — только внутри For и While](#ошибка-158-continue-только-внутри-for-и-while)
-- [№159: В строке может быть только одно Return](#ошибка-159-в-строке-может-быть-только-одно-return)
-- [№160: Return — только внутри Sub и Function](#ошибка-160-return-только-внутри-sub-и-function)
-
-**Ошибки импорта и работы с модулями (дополнительные)**
-- [№161: Отсутствует имя импортируемого файла модуля](#ошибка-161-отсутствует-имя-импортируемого-файла-модуля)
-- [№162: Импортируемые модули не могут содержать include](#ошибка-162-импортируемые-модули-не-могут-содержать-include)
-- [№163: Импортируемые модули не могут содержать folder](#ошибка-163-импортируемые-модули-не-могут-содержать-folder)
-- [№164: В .bpm определение процедур недопустимо](#ошибка-164-в-bpm-определение-процедур-недопустимо)
-- [№165: В .bpm допустимы только функции и свойства](#ошибка-165-в-bpm-допустимы-только-функции-и-свойства)
-- [№166: Нельзя использовать глобальные переменные в .bpm](#ошибка-166-нельзя-использовать-глобальные-переменные-в-bpm)
-- [№167: Нельзя использовать глобальные метки в .bpm](#ошибка-167-нельзя-использовать-глобальные-метки-в-bpm)
-- [№168: Свойство модуля должно состоять из типа и имени](#ошибка-168-свойство-модуля-должно-состоять-из-типа-и-имени)
-- [№169: Свойство модуля: тип и имя](#ошибка-169-свойство-модуля-тип-и-имя)
-- [№170: Тип свойства может быть только number, number[], string, string[]](#ошибка-170-тип-свойства-может-быть-только-number-number-string-string)
-- [№171: Свойство с таким именем не определено в модуле](#ошибка-171-свойство-с-таким-именем-не-определено-в-модуле)
+**Ключевые слова (Break, Continue, Return)**
+- [№155: В строке может быть только одно Break](#ошибка-155-в-строке-может-быть-только-одно-ключевое-слово-break)
+- [№156: Break — только внутри For и While](#ошибка-156-break-можно-использовать-только-внутри-forendfor-и-whileendwhile)
+- [№157: В строке может быть только одно Continue](#ошибка-157-в-строке-может-быть-только-одно-ключевое-слово-continue)
+- [№158: Continue — только внутри For и While](#ошибка-158-continue-можно-использовать-только-внутри-forendfor-и-whileendwhile)
+- [№159: В строке может быть только одно Return](#ошибка-159-в-строке-может-быть-только-одно-ключевое-слово-return)
+- [№160: Return — только внутри Sub и Function](#ошибка-160-return-можно-использовать-только-внутри-subendsub-и-functionendfunction)
+- [№161: Свойство с таким именем не определено в модуле](#ошибка-161-свойство-с-таким-именем-не-определено-в-модуле)
 
 ---
 
@@ -243,7 +231,7 @@
 ### Алгоритм решения для всех ошибок этого блока:
 1. Открой папку с программой.  
 2. Найди папку `~имя_программы`.  
-3. Открой файл `~имя_программы` в Блокноте.  
+3. Открой файл `~имя_программы.bp` в Блокноте.  
 4. Найди строку и позицию (например, `123:45`).  
 5. Посмотри на код — ошибка там!  
 6. Вернись в свой `.bp` файл и исправь.
@@ -471,12 +459,12 @@ Invalid number of parameters
 
 **Неправильно:**
 ```
-TextWindow.WriteLine("Привет", "Мир")
+LCD.Clear("a")
 ```
 
 **Правильно:**
 ```
-TextWindow.WriteLine("Привет")
+LCD.Clear()
 ```
 
 ---
@@ -624,12 +612,12 @@ Missing parameter
 
 **Неправильно:**
 ```
-TextWindow.WriteLine()
+a = Math.Abs()
 ```
 
 **Правильно:**
 ```
-TextWindow.WriteLine("Привет")
+a = Math.Abs(-5)
 ```
 
 ---
@@ -655,12 +643,12 @@ Method does not return values
 
 **Неправильно:**
 ```
-x = TextWindow.WriteLine("Привет")
+x = LCD.Write(10, 10, "Hello")
 ```
 
 **Правильно:**
 ```
-TextWindow.WriteLine("Привет")
+LCD.Write(10, 10, "Hello")
 x = 5
 ```
 
@@ -686,12 +674,14 @@ Method does not return values as a parameter
 
 **Неправильно:**
 ```
-x = Math.Sin(TextWindow.WriteLine("Привет"))
+x = Math.Sin(LCD.Write(10, 10, "Hello"))
+x = LCD.Write(10, 10, "Hello")
 ```
 
 **Правильно:**
 ```
 x = Math.Sin(5)
+LCD.Write(10, 10, "Hello")
 ```
 
 ---
@@ -777,16 +767,16 @@ Method not found
 
 **Как исправить:**  
 1. Проверьте, правильно ли написано имя метода.  
-2. Проверьте, не перепутали ли вы регистр букв.
+2. Проверьте количество параметров, которое Вы ввели в метод.
 
 **Неправильно:**
 ```
-TextWindow.Writeline("Привет")
+LCD.Write(10, "Hello")
 ```
 
 **Правильно:**
 ```
-TextWindow.WriteLine("Привет")
+LCD.Write(10, 10, "Hello")
 ```
 
 ---
@@ -811,12 +801,12 @@ Extra brackets in method call
 
 **Неправильно:**
 ```
-TextWindow.WriteLine(("Привет"))
+LCD.Write((10, 10, "Hello"))
 ```
 
 **Правильно:**
 ```
-TextWindow.WriteLine("Привет")
+LCD.Write(10, 10, "Hello")
 ```
 
 ---
@@ -841,12 +831,12 @@ Missing brackets in method call
 
 **Неправильно:**
 ```
-TextWindow.WriteLine "Привет"
+LCD.Clear
 ```
 
 **Правильно:**
 ```
-TextWindow.WriteLine("Привет")
+LCD.Clear()
 ```
 
 ---
@@ -871,12 +861,12 @@ File name must be a string
 
 **Неправильно:**
 ```
-Include data.bpi
+Include data
 ```
 
 **Правильно:**
 ```
-Include "data.bpi"
+Include "data"
 ```
 
 ---
@@ -901,12 +891,12 @@ Parameters must be indicated as a string
 
 **Неправильно:**
 ```
-folder MyProject
+folder prjs MyProject
 ```
 
 **Правильно:**
 ```
-folder "MyProject"
+folder "prjs" "MyProject"
 ```
 
 ---
@@ -937,7 +927,7 @@ Print "Привет"
 
 **Правильно:**
 ```
-TextWindow.WriteLine("Привет")
+LCD.Write(10, 10, "Hello")
 ```
 
 ---
@@ -964,13 +954,13 @@ Row type not recognized
 **Неправильно:**
 ```
 If x > 5
-    TextWindow.WriteLine("Больше")
+    LCD.Write(10, 10, "Bigger")
 ```
 
 **Правильно:**
 ```
 If x > 5 Then
-    TextWindow.WriteLine("Больше")
+    LCD.Write(10, 10, "Bigger")
 EndIf
 ```
 
@@ -1038,13 +1028,13 @@ IF structure not closed properly
 **Неправильно:**
 ```
 If x > 5 Then
-    TextWindow.WriteLine("x больше 5")
+    LCD.Write(10, 10, "Bigger")
 ```
 
 **Правильно:**
 ```
 If x > 5 Then
-    TextWindow.WriteLine("x больше 5")
+    LCD.Write(10, 10, "Bigger")
 EndIf
 ```
 
@@ -1106,13 +1096,13 @@ FOR structure not closed properly
 **Неправильно:**
 ```
 For i = 1 To 10
-    TextWindow.WriteLine(i)
+    LCD.Write(10, 10, 1)
 ```
 
 **Правильно:**
 ```
 For i = 1 To 10
-    TextWindow.WriteLine(i)
+    LCD.Write(10, 10, 1)
 EndFor
 ```
 
@@ -1139,13 +1129,13 @@ FOR structure has no beginning
 **Неправильно:**
 ```
 EndFor
-TextWindow.WriteLine("Готово")
+LCD.Write(10, 10, "Ready")
 ```
 
 **Правильно:**
 ```
 For i = 1 To 10
-    TextWindow.WriteLine(i)
+    LCD.Write(10, 10, "Ready")
 EndFor
 ```
 
@@ -1207,13 +1197,13 @@ WHILE structure has no beginning
 **Неправильно:**
 ```
 EndWhile
-TextWindow.WriteLine("Готово")
+x += 1
 ```
 
 **Правильно:**
 ```
 While x < 10
-    x = x + 1
+    x += 1
 EndWhile
 ```
 
@@ -1240,13 +1230,13 @@ SUB structure is not closed
 **Неправильно:**
 ```
 Sub MyProcedure
-    TextWindow.WriteLine("Привет")
+    LCD.Write(10, 10, "Bigger")
 ```
 
 **Правильно:**
 ```
 Sub MyProcedure
-    TextWindow.WriteLine("Привет")
+    LCD.Write(10, 10, "Bigger")
 EndSub
 ```
 
@@ -1272,14 +1262,14 @@ SUB structure has no beginning
 
 **Неправильно:**
 ```
-    TextWindow.WriteLine("Процедура")
+    LCD.Write(10, 10, "Hello")
 EndSub
 ```
 
 **Правильно:**
 ```
 Sub MyProcedure
-    TextWindow.WriteLine("Процедура")
+    LCD.Write(10, 10, "Hello")
 EndSub
 ```
 
@@ -1305,13 +1295,13 @@ FUNCTION structure is not closed
 
 **Неправильно:**
 ```
-Function MyFunction
+Function MyFunction()
     a = 5
 ```
 
 **Правильно:**
 ```
-Function MyFunction
+Function MyFunction()
     a = 5
 EndFunction
 ```
@@ -1344,7 +1334,7 @@ EndFunction
 
 **Правильно:**
 ```
-Function MyFunction
+Function MyFunction()
     a = 5
 EndFunction
 ```
@@ -1372,9 +1362,9 @@ SUB structure can not contain other SUB structure
 **Неправильно:**
 ```
 Sub Main
-    TextWindow.WriteLine("Начало")
+    LCD.Write(10, 10, "First")
     Sub Inner
-        TextWindow.WriteLine("Внутри")
+        LCD.Write(10, 10, "Second")
     EndSub
 EndSub
 ```
@@ -1382,11 +1372,11 @@ EndSub
 **Правильно:**
 ```
 Sub Main
-    TextWindow.WriteLine("Начало")
+    LCD.Write(10, 10, "First")
 EndSub
 
 Sub Inner
-    TextWindow.WriteLine("Внутри")
+    LCD.Write(10, 10, "Second")
 EndSub
 ```
 
@@ -1413,9 +1403,9 @@ SUB structure can not contain other FUNCTION structure
 **Неправильно:**
 ```
 Sub MyProcedure
-    TextWindow.WriteLine("Процедура")
-    Function MyFunction
-        Return 5
+    LCD.Write(10, 10, "First")
+    Function MyFunction()
+        a = 5
     EndFunction
 EndSub
 ```
@@ -1423,11 +1413,11 @@ EndSub
 **Правильно:**
 ```
 Sub MyProcedure
-    TextWindow.WriteLine("Процедура")
+    LCD.Write(10, 10, "First")
 EndSub
 
-Function MyFunction
-    Return 5
+Function MyFunction()
+    a = 5
 EndFunction
 ```
 
@@ -1453,22 +1443,22 @@ FUNCTION structure can not contain other SUB structure
 
 **Неправильно:**
 ```
-Function MyFunction
+Function MyFunction()
     a = 5
     Sub MyProcedure
-        TextWindow.WriteLine("Привет")
+        LCD.Write(10, 10, "Hello")
     EndSub
 EndFunction
 ```
 
 **Правильно:**
 ```
-Function MyFunction
+Function MyFunction()
     a = 5
 EndFunction
 
 Sub MyProcedure
-    TextWindow.WriteLine("Привет")
+    LCD.Write(10, 10, "Hello")
 EndSub
 ```
 
@@ -1494,9 +1484,9 @@ FUNCTION structure can not contain other FUNCTION structure
 
 **Неправильно:**
 ```
-Function Main
+Function Main()
     a = 5
-    Function Inner
+    Function Inner()
         b = 10
     EndFunction
 EndFunction
@@ -1504,11 +1494,11 @@ EndFunction
 
 **Правильно:**
 ```
-Function Main
+Function Main()
     a = 5
 EndFunction
 
-Function Inner
+Function Inner()
     b = 10
 EndFunction
 ```
@@ -1540,13 +1530,11 @@ Invalid code. 'Else' must only be indicated
 **Неправильно:**
 ```
 EndIf x = 5
-Else x > 5
 ```
 
 **Правильно:**
 ```
 EndIf
-Else
 ```
 
 ---
@@ -1571,7 +1559,7 @@ Invalid code. 'EndFunction' must only be indicated
 
 **Неправильно:**
 ```
-EndFunction MyFunction
+EndFunction MyFunction()
 ```
 
 **Правильно:**
@@ -1602,14 +1590,14 @@ Missing keyword 'To'
 **Неправильно:**
 ```
 For i = 1 10
-    TextWindow.WriteLine(i)
+    LCD.Write(10, 10, i)
 EndFor
 ```
 
 **Правильно:**
 ```
 For i = 1 To 10
-    TextWindow.WriteLine(i)
+    LCD.Write(10, 10, i)
 EndFor
 ```
 
@@ -1642,7 +1630,7 @@ For i = 1 10
 **Правильно:**
 ```
 For i = 1 To 10
-    TextWindow.WriteLine(i)
+    LCD.Write(10, 10, i)
 EndFor
 ```
 
@@ -1733,7 +1721,7 @@ Variable not initialized
 
 **Неправильно:**
 ```
-Dim x
+number x
 y = x + 5
 ```
 
@@ -2137,13 +2125,13 @@ Invalid code. Jump label name and two-spot at the end must only be indicated
 
 **Неправильно:**
 ```
-myLabel: TextWindow.WriteLine("Привет")
+myLabel: LCD.Write(10, 10, "Hello")
 ```
 
 **Правильно:**
 ```
 myLabel:
-TextWindow.WriteLine("Привет")
+LCD.Write(10, 10, "Hello")
 ```
 
 ---
@@ -2170,9 +2158,9 @@ Label with this name is already defined in this function
 ```
 Sub Test
     start:
-    TextWindow.WriteLine("Один")
+    LCD.Write(10, 10, "1")
     start:
-    TextWindow.WriteLine("Два")
+    LCD.Write(20, 10, "2")
 EndSub
 ```
 
@@ -2180,9 +2168,9 @@ EndSub
 ```
 Sub Test
     start:
-    TextWindow.WriteLine("Один")
+    LCD.Write(10, 10, "1")
     nextStep:
-    TextWindow.WriteLine("Два")
+    LCD.Write(20, 10, "2")
 EndSub
 ```
 
@@ -2217,7 +2205,7 @@ start:
 ```
 start:
 Goto next
-continue:
+nextStep:
 ```
 
 ---
@@ -2277,20 +2265,24 @@ Procedure not found
 
 **Как исправить:**  
 1. Проверьте, правильно ли написано имя.  
-2. Проверьте, определена ли процедура перед вызовом.
+2. Проверьте количество параметров.
 
 **Неправильно:**
 ```
-MyProcedure()
+Function MyFunction(in number a)
+    LCD.Write(10, 10, a)
+EndFunction
+
+MyFunction()
 ```
 
 **Правильно:**
 ```
-Sub MyProcedure
-    TextWindow.WriteLine("Привет")
-EndSub
+Function MyFunction(in number a)
+    LCD.Write(10, 10, a)
+EndFunction
 
-MyProcedure()
+MyFunction(1)
 ```
 
 ---
@@ -2312,25 +2304,24 @@ Function not found
 
 **Как исправить:**  
 1. Проверьте, правильно ли написано имя.  
-2. Проверьте, объявлена ли функция до вызова.  
-3. Проверьте количество параметров.
+2. Проверьте количество параметров.
 
 **Неправильно:**
 ```
-x = MyFunction(5)
-
-Function MyFunction(a)
-    Return a * 2
+Function MyFunction(in number a)
+    LCD.Write(10, 10, a)
 EndFunction
+
+MyFunction()
 ```
 
 **Правильно:**
 ```
-Function MyFunction(a)
-    Return a * 2
+Function MyFunction(in number a)
+    LCD.Write(10, 10, a)
 EndFunction
 
-x = MyFunction(5)
+MyFunction(1)
 ```
 
 ---
@@ -2361,7 +2352,7 @@ Sub
 **Правильно:**
 ```
 Sub MyProcedure
-    TextWindow.WriteLine("Привет")
+    LCD.Write(10, 10, "Hello")
 EndSub
 ```
 
@@ -2383,11 +2374,11 @@ Procedure definition must contain keyword 'Sub' and procedure name
 Вы забыли написать `Sub` или имя процедуры.
 
 **Как исправить:**  
-1. Начните процедуру с `Sub` и укажите имя.
+1. Начните процедуру с `Sub` и укажите имя, которое не является ключевым словом.
 
 **Неправильно:**
 ```
-MyProcedure
+Sub include
 ```
 
 **Правильно:**
@@ -2447,7 +2438,7 @@ Procedure definition contains invalid keywords
 
 **Неправильно:**
 ```
-Function MyProcedure
+Sub Function
 ```
 
 **Правильно:**
@@ -2763,7 +2754,7 @@ Function
 **Правильно:**
 ```
 Function MyFunction()
-    Return 5
+    a = 5
 EndFunction
 ```
 
@@ -2790,14 +2781,14 @@ Missing brackets in function definition
 **Неправильно:**
 ```
 Function MyFunction
-    Return 5
+    a = 5
 EndFunction
 ```
 
 **Правильно:**
 ```
 Function MyFunction()
-    Return 5
+    a = 5
 EndFunction
 ```
 
@@ -2824,14 +2815,14 @@ Missing function name in function definition
 **Неправильно:**
 ```
 Function
-    Return 5
+    a = 5
 EndFunction
 ```
 
 **Правильно:**
 ```
 Function MyFunction()
-    Return 5
+    a = 5
 EndFunction
 ```
 
@@ -2850,22 +2841,22 @@ Invalid keywords in function definition
 ```
 
 **Что это значит простыми словами:**  
-Вы использовали неправильные слова при объявлении функции.
+Вы использовали неправильные или ключевые слова при объявлении функции.
 
 **Как исправить:**  
-1. Используйте только `Function` для функций.
+1. Используйте только `Function` для функций, не используйте ключевые слова в качестве названий функций.
 
 **Неправильно:**
 ```
-Sub MyFunction()
-    Return 5
+Function in()
+    a = 5
 EndFunction
 ```
 
 **Правильно:**
 ```
-Function MyFunction()
-    Return 5
+Function MyIn()
+    a = 5
 EndFunction
 ```
 
@@ -2887,19 +2878,19 @@ Invalid expressions in function definition
 В строке объявления функции есть что-то лишнее.
 
 **Как исправить:**  
-1. Оставьте только `Function`, имя и `()`.
+1. Оставьте только `Function`, имя и `()`. Не используйте ключевые слова в качестве названий функций и переменных
 
 **Неправильно:**
 ```
-Function MyFunction() = 5
-    Return 5
+Function in()
+    a = 5
 EndFunction
 ```
 
 **Правильно:**
 ```
-Function MyFunction()
-    Return 5
+Function MyIn()
+    a = 5
 EndFunction
 ```
 
@@ -2926,14 +2917,14 @@ Function definition contains variables with the same name
 **Неправильно:**
 ```
 Function MyFunction(in number a, in number a)
-    Return a
+    x = a
 EndFunction
 ```
 
 **Правильно:**
 ```
 Function MyFunction(in number a, in number b)
-    Return a + b
+    x = a + b
 EndFunction
 ```
 
@@ -2960,22 +2951,22 @@ Name can not be used because a function with this name is already defined
 **Неправильно:**
 ```
 Function MyFunction()
-    Return 5
+    a = 5
 EndFunction
 
 Function MyFunction()
-    Return 10
+    a = 10
 EndFunction
 ```
 
 **Правильно:**
 ```
 Function MyFunction()
-    Return 5
+    a = 5
 EndFunction
 
 Function MyOtherFunction()
-    Return 10
+    a = 10
 EndFunction
 ```
 
@@ -3002,22 +2993,22 @@ Name can not be used because a procedure with this name is already defined
 **Неправильно:**
 ```
 Sub MyProcedure
-    TextWindow.WriteLine("Привет")
+    LCD.Write(10, 10, "Hello")
 EndSub
 
 Function MyProcedure()
-    Return 5
+    a = 5
 EndFunction
 ```
 
 **Правильно:**
 ```
 Sub MyProcedure
-    TextWindow.WriteLine("Привет")
+    LCD.Write(10, 10, "Hello")
 EndSub
 
 Function MyFunction()
-    Return 5
+    a = 5
 EndFunction
 ```
 
@@ -3044,22 +3035,22 @@ Function with this name and number of parameters is already defined
 **Неправильно:**
 ```
 Function MyFunction(a)
-    Return a
+    x = a
 EndFunction
 
 Function MyFunction(b)
-    Return b * 2
+    x = b
 EndFunction
 ```
 
 **Правильно:**
 ```
 Function MyFunction(a)
-    Return a
+    x = a
 EndFunction
 
 Function MyFunction2(b)
-    Return b * 2
+    x = b
 EndFunction
 ```
 
@@ -3085,15 +3076,15 @@ Variable definitions in function definition must be separated with a comma
 
 **Неправильно:**
 ```
-Function MyFunction(a b c)
-    Return a + b + c
+Function MyFunction(in number a in number b in number c)
+    x = a + b + c
 EndFunction
 ```
 
 **Правильно:**
 ```
-Function MyFunction(a, b, c)
-    Return a + b + c
+Function MyFunction(in number a, in number b, in number c)
+    x = a + b + c
 EndFunction
 ```
 
@@ -3119,15 +3110,15 @@ There must be a variable before the comma in function definition
 
 **Неправильно:**
 ```
-Function MyFunction(, b, c)
-    Return b + c
+Function MyFunction(, in number b, in number c)
+    x = b + c
 EndFunction
 ```
 
 **Правильно:**
 ```
-Function MyFunction(a, b, c)
-    Return a + b + c
+Function MyFunction(in number a, in number b, in number c)
+    x = a + b + c
 EndFunction
 ```
 
@@ -3154,14 +3145,14 @@ Variable type not defined in function definition
 **Неправильно:**
 ```
 Function MyFunction(in a)
-    Return a
+    x = a
 EndFunction
 ```
 
 **Правильно:**
 ```
 Function MyFunction(in number a)
-    Return a
+    x = a
 EndFunction
 ```
 
@@ -3376,12 +3367,12 @@ Method that returns a number can be used for array indexing
 
 **Неправильно:**
 ```
-a[TextWindow.Read()] = 10
+a[LCD.Write(10, 10, "Hello")] = 10
 ```
 
 **Правильно:**
 ```
-i = TextWindow.ReadNumber()
+i = Math.Power(2, 3) 
 a[i] = 10
 ```
 
@@ -3438,7 +3429,6 @@ Invalid values in array index
 **Неправильно:**
 ```
 a[-1] = 10
-a[100] = 10
 ```
 
 **Правильно:**
@@ -3468,7 +3458,7 @@ Only methods that return figures or rows can be used with operators +=, -=, *=, 
 
 **Неправильно:**
 ```
-x += TextWindow.WriteLine("Привет")
+x += LCD.Clear()
 ```
 
 **Правильно:**
@@ -3624,14 +3614,14 @@ Boolean expression must have two operands
 **Неправильно:**
 ```
 If x > Then
-    TextWindow.WriteLine("x больше")
+    LCD.Write(10, 10, "Hello")
 EndIf
 ```
 
 **Правильно:**
 ```
 If x > 5 Then
-    TextWindow.WriteLine("x больше 5")
+    LCD.Write(10, 10, "x bigger then 5")
 EndIf
 ```
 
@@ -3658,14 +3648,14 @@ There must be a logical operator between operands
 **Неправильно:**
 ```
 If x 5 Then
-    TextWindow.WriteLine("x равно 5")
+    LCD.Write(10, 10, "x = 5")
 EndIf
 ```
 
 **Правильно:**
 ```
 If x = 5 Then
-    TextWindow.WriteLine("x равно 5")
+    LCD.Write(10, 10, "x = 5")
 EndIf
 ```
 
@@ -3692,14 +3682,14 @@ Numbers and lines can only be compared
 **Неправильно:**
 ```
 If a = b Then
-    TextWindow.WriteLine("Массивы равны")
+    LCD.Write(10, 10, "the arrays are equal")
 EndIf
 ```
 
 **Правильно:**
 ```
 If a[0] = b[0] Then
-    TextWindow.WriteLine("Элементы равны")
+    LCD.Write(10, 10, "the elements are equal")
 EndIf
 ```
 
@@ -3726,14 +3716,14 @@ You cannot use two logical operators in a row
 **Неправильно:**
 ```
 If x > 5 And And y < 10 Then
-    TextWindow.WriteLine("Условие выполнено")
+    LCD.Write(10, 10, "condition exists")
 EndIf
 ```
 
 **Правильно:**
 ```
 If x > 5 And y < 10 Then
-    TextWindow.WriteLine("Условие выполнено")
+    LCD.Write(10, 10, "condition exists")
 EndIf
 ```
 
@@ -3759,18 +3749,10 @@ Module not found
 Вы пытаетесь использовать модуль, но компьютер не может его найти.
 
 **Как исправить:**  
-1. Проверьте, правильно ли написано имя файла.  
-2. Проверьте, есть ли файл в папке.
-
-**Неправильно:**
-```
-Include "myModule"
-```
-
-**Правильно:**
-```
-Include "myModule.bpi"
-```
+1. Проверьте, правильно ли написано имя файла. Расширение файла писать нельзя.
+2. Проверьте, есть ли файл в папке с программой.
+3. Проверьте относительный путь до файла.
+4. Попробуйте закрыть оба файла и снова их открыть, иногда приложение берёт старый путь файла при копировании или открывании из другой папки.
 
 ---
 
@@ -3790,18 +3772,10 @@ File not found
 Вы пытаетесь открыть или подключить файл, но компьютер не может его найти.
 
 **Как исправить:**  
-1. Проверьте, правильно ли написано имя файла.  
-2. Проверьте, находится ли файл в нужной папке.
-
-**Неправильно:**
-```
-Include "data.bpi"
-```
-
-**Правильно:**
-```
-Include "data.bpi" (файл должен существовать)
-```
+1. Проверьте, правильно ли написано имя файла. Расширение файла писать нельзя.  
+2. Проверьте, есть ли файл в папке с программой.
+3. Проверьте относительный путь до файла.
+4. Попробуйте закрыть оба файла и снова их открыть, иногда приложение берёт старый путь файла при копировании или открывании из другой папки.
 
 ---
 
@@ -3830,7 +3804,7 @@ Include
 
 **Правильно:**
 ```
-Include "myModule.bpi"
+Include "myModule"
 ```
 
 ---
@@ -3892,13 +3866,13 @@ Files being included can not contain keyword 'folder'
 **Неправильно:**
 ```
 ' module1.bpi
-folder "MyProject"
+folder "prjs" MyProject"
 ```
 
 **Правильно:**
 ```
 ' main.bp
-folder "MyProject"
+folder "prjs" "MyProject"
 Include "module1.bpi"
 ```
 
@@ -3924,13 +3898,13 @@ Keyword 'folder' can only be declared once
 
 **Неправильно:**
 ```
-folder "Project1"
-folder "Project2"
+folder "prjs" "Project1"
+folder "prjs" "Project2"
 ```
 
 **Правильно:**
 ```
-folder "MyProject"
+folder "prjs" "MyProject"
 ```
 
 ---
@@ -3955,15 +3929,15 @@ Keyword 'folder' can not be used in module files
 
 **Неправильно:**
 ```
-' myModule.bpi
-folder "MyProject"
+' myModule.bpm
+folder "prjs" "MyProject"
 ```
 
 **Правильно:**
 ```
 ' main.bp
-folder "MyProject"
-Include "myModule.bpi"
+folder "prjs" "MyProject"
+Include "myModule.bpm"
 ```
 
 ---
@@ -3988,7 +3962,7 @@ Keyword 'global' can not be used in module files
 
 **Неправильно:**
 ```
-' myModule.bpi
+' myModule.bpm
 global x = 5
 ```
 
@@ -3996,7 +3970,7 @@ global x = 5
 ```
 ' main.bp
 global x = 5
-Include "myModule.bpi"
+Include "myModule.bpm"
 ```
 
 ---
@@ -4018,19 +3992,19 @@ Project name can not contain more than 32 characters
 ```
 
 **Что это значит простыми словами:**  
-Вы указали слишком длинное имя проекта.
+Вы указали слишком длинное имя файла или проекта.
 
 **Как исправить:**  
 1. Сократите имя до 32 символов.
 
 **Неправильно:**
 ```
-folder "MyVeryVeryVeryLongProjectNameThatIsTooLong"
+folder "prjs" "MyVeryVeryVeryLongProjectNameThatIsTooLong"
 ```
 
 **Правильно:**
 ```
-folder "MyShortProjectName"
+folder "prjs" "MyShortProjectName"
 ```
 
 ---
@@ -4055,12 +4029,12 @@ Project name can not be void
 
 **Неправильно:**
 ```
-folder ""
+folder "prjs" ""
 ```
 
 **Правильно:**
 ```
-folder "MyProject"
+folder "prjs" "MyProject"
 ```
 
 ---
@@ -4085,12 +4059,12 @@ Project name must begin with A-Z, a - z
 
 **Неправильно:**
 ```
-folder "1Project"
+folder "prjs" "1Project"
 ```
 
 **Правильно:**
 ```
-folder "Project1"
+folder "prjs" "Project1"
 ```
 
 ---
@@ -4115,13 +4089,13 @@ Project name can only contain letters A-Z and a-z, figures 0 - 9 and underscore 
 
 **Неправильно:**
 ```
-folder "My Project!"
-folder "My-Project"
+folder "prjs" "My Project!"
+folder "prjs" "My-Project"
 ```
 
 **Правильно:**
 ```
-folder "My_Project"
+folder "prjs" "My_Project"
 ```
 
 ---
@@ -4139,19 +4113,19 @@ The first parameter must be "prjs" or "sd"
 ```
 
 **Что это значит простыми словами:**  
-Вы указали неправильный путь.
+Вы указали не указали первый параметр после ключевого слова folder.
 
 **Как исправить:**  
-1. Используйте `"prjs"` или `"sd"`.
+1. Используйте `"prjs"`, чтобы сохранить в память робота или `"sd"`, чтобы сохранить на SD карту.
 
 **Неправильно:**
 ```
-Include "myFolder/myModule.bpi"
+folder "myFolder"
 ```
 
 **Правильно:**
 ```
-Include "prjs/myModule.bpi"
+folder "prjs" "myFolder"
 ```
 
 ---
@@ -4176,14 +4150,14 @@ Keyword 'folder' must be indicated before the beginning of main code
 
 **Неправильно:**
 ```
-TextWindow.WriteLine("Привет")
-folder "MyProject"
+LCD.Write(10, 10, "Hello")
+folder "prjs" "MyProject"
 ```
 
 **Правильно:**
 ```
-folder "MyProject"
-TextWindow.WriteLine("Привет")
+folder "prjs" "MyProject"
+LCD.Write(10, 10, "Hello")
 ```
 
 ---
@@ -4215,14 +4189,14 @@ There must be a variable type after keyword 'in/out' in function definition
 **Неправильно:**
 ```
 Function MyFunction(in a)
-    Return a
+    x = a
 EndFunction
 ```
 
 **Правильно:**
 ```
 Function MyFunction(in number a)
-    Return a
+    x = a
 EndFunction
 ```
 
@@ -4249,14 +4223,14 @@ Variable type must be indicated before the variable in function definition
 **Неправильно:**
 ```
 Function MyFunction(a)
-    Return a
+    x = a
 EndFunction
 ```
 
 **Правильно:**
 ```
-Function MyFunction(number a)
-    Return a
+Function MyFunction(in number a)
+    x = a
 EndFunction
 ```
 
@@ -4283,14 +4257,14 @@ Keyword 'in/out' must be indicated after the comma in function definition
 **Неправильно:**
 ```
 Function MyFunction(in number a, number b)
-    Return a + b
+    x = a + b
 EndFunction
 ```
 
 **Правильно:**
 ```
 Function MyFunction(in number a, in number b)
-    Return a + b
+    x = a + b
 EndFunction
 ```
 
@@ -4317,14 +4291,14 @@ Keyword 'in/out' must be indicated before the variable type in function definiti
 **Неправильно:**
 ```
 Function MyFunction(number a)
-    Return a
+    x = a
 EndFunction
 ```
 
 **Правильно:**
 ```
 Function MyFunction(in number a)
-    Return a
+    x = a
 EndFunction
 ```
 
@@ -4351,14 +4325,14 @@ Variable name must be indicated after the variable type in function definition
 **Неправильно:**
 ```
 Function MyFunction(in number)
-    Return 0
+    x = 0
 EndFunction
 ```
 
 **Правильно:**
 ```
 Function MyFunction(in number a)
-    Return a
+    x = a
 EndFunction
 ```
 
@@ -4385,14 +4359,14 @@ Keyword 'in/out' and variable type must be indicated before the variable in func
 **Неправильно:**
 ```
 Function MyFunction(a)
-    Return a
+    x = a
 EndFunction
 ```
 
 **Правильно:**
 ```
 Function MyFunction(in number a)
-    Return a
+    x = a
 EndFunction
 ```
 
@@ -4419,14 +4393,14 @@ Variable type not defined in function definition
 **Неправильно:**
 ```
 Function MyFunction(in a)
-    Return a
+    x = a
 EndFunction
 ```
 
 **Правильно:**
 ```
 Function MyFunction(in number a)
-    Return a
+    x = a
 EndFunction
 ```
 
@@ -4453,19 +4427,19 @@ Parameter has different type
 **Неправильно:**
 ```
 Function MyFunction(in number a)
-    Return a * 2
+    x = a * 2
 EndFunction
 
-value = MyFunction("5")
+MyFunction("5")
 ```
 
 **Правильно:**
 ```
 Function MyFunction(in number a)
-    Return a * 2
+    x = a * 2
 EndFunction
 
-value = MyFunction(5)
+MyFunction(5)
 ```
 
 ---
@@ -4503,7 +4477,6 @@ Function MyFunction(out number result)
     result = 5
 EndFunction
 
-Dim x
 MyFunction(x)
 ```
 
@@ -4529,22 +4502,20 @@ Parameters can not contain references to global variables in function definition
 
 **Неправильно:**
 ```
-global x = 5
+number x
 
 Function MyFunction(in number x)
-    Return x
+    x = 5
 EndFunction
 ```
 
 **Правильно:**
 ```
-global x = 5
+number x
 
 Function MyFunction(in number value)
-    Return value
+    value = 5
 EndFunction
-
-result = MyFunction(x)
 ```
 
 ---
@@ -4570,14 +4541,14 @@ Boolean expression missing left side
 **Неправильно:**
 ```
 If > 5 Then
-    TextWindow.WriteLine("x больше 5")
+    LCD.Write(10, 10, "Hello")
 EndIf
 ```
 
 **Правильно:**
 ```
 If x > 5 Then
-    TextWindow.WriteLine("x больше 5")
+    LCD.Write(10, 10, "Hello")
 EndIf
 ```
 
@@ -4604,14 +4575,14 @@ Boolean expression missing right side
 **Неправильно:**
 ```
 If x > Then
-    TextWindow.WriteLine("x больше 5")
+    LCD.Write(10, 10, "Hello")
 EndIf
 ```
 
 **Правильно:**
 ```
 If x > 5 Then
-    TextWindow.WriteLine("x больше 5")
+    LCD.Write(10, 10, "Hello")
 EndIf
 ```
 
@@ -4643,7 +4614,7 @@ For i 1 To 10
 **Правильно:**
 ```
 For i = 1 To 10
-    TextWindow.WriteLine(i)
+    LCD.Write(10 * i, 10 * i, i)
 EndFor
 ```
 
@@ -4676,7 +4647,7 @@ For i To 10
 **Правильно:**
 ```
 For i = 1 To 10
-    TextWindow.WriteLine(i)
+    LCD.Write(10 * i, 10 * i, i)
 EndFor
 ```
 
@@ -4703,14 +4674,14 @@ In For cycle, variable must contain a number
 **Неправильно:**
 ```
 For i = "1" To 10
-    TextWindow.WriteLine(i)
+    LCD.Write(10 * i, 10 * i, i)
 EndFor
 ```
 
 **Правильно:**
 ```
 For i = 1 To 10
-    TextWindow.WriteLine(i)
+    LCD.Write(10 * i, 10 * i, i)
 EndFor
 ```
 
@@ -4737,14 +4708,14 @@ EndFor
 **Неправильно:**
 ```
 If x > 5
-    TextWindow.WriteLine("x больше 5")
+    LCD.Write(10, 10, "Hello")
 EndIf
 ```
 
 **Правильно:**
 ```
 If x > 5 Then
-    TextWindow.WriteLine("x больше 5")
+    LCD.Write(10, 10, "Hello")
 EndIf
 ```
 
@@ -4771,14 +4742,14 @@ Missing logical condition
 **Неправильно:**
 ```
 If Then
-    TextWindow.WriteLine("Что-то")
+    LCD.Write(10, 10, "Hello")
 EndIf
 ```
 
 **Правильно:**
 ```
 If x > 5 Then
-    TextWindow.WriteLine("x больше 5")
+    LCD.Write(10, 10, "Hello")
 EndIf
 ```
 
@@ -4809,7 +4780,7 @@ Import
 
 **Правильно:**
 ```
-Import "myModule.bpm"
+Import "myModule"
 ```
 
 ---
@@ -4841,8 +4812,8 @@ Include "helpers.bpi"
 **Правильно:**
 ```
 ' main.bp
-Include "helpers.bpi"
-Import "myModule.bpm"
+Include "helpers"
+Import "myModule"
 ```
 
 ---
@@ -4868,14 +4839,14 @@ Imported module files can not contain keyword 'folder'
 **Неправильно:**
 ```
 ' myModule.bpm
-folder "MyProject"
+folder "prjs" "MyProject"
 ```
 
 **Правильно:**
 ```
 ' main.bp
-folder "MyProject"
-Import "myModule.bpm"
+folder "prjs" "MyProject"
+Import "myModule"
 ```
 
 ---
@@ -4902,7 +4873,7 @@ Invalid procedure definition in .bpm module files
 ```
 ' myModule.bpm
 Sub MyProcedure
-    TextWindow.WriteLine("Привет")
+    LCD.Write(10, 10, "Hello")
 EndSub
 ```
 
@@ -4910,8 +4881,7 @@ EndSub
 ```
 ' myModule.bpm
 Function MyFunction()
-    TextWindow.WriteLine("Привет")
-    Return 0
+    LCD.Write(10, 10, "Hello")
 EndFunction
 ```
 
@@ -4946,7 +4916,6 @@ x = 5
 ' myModule.bpm
 Function MyFunction()
     x = 5
-    Return 0
 EndFunction
 ```
 
@@ -4973,24 +4942,22 @@ References to global variables can not be used in .bpm modules
 **Неправильно:**
 ```
 ' main.bp
-global x = 5
+global x
 
 ' myModule.bpm
 Function MyFunction()
     y = x + 10
-    Return y
 EndFunction
 ```
 
 **Правильно:**
 ```
 ' main.bp
-global x = 5
+global x
 
 ' myModule.bpm
-Function MyFunction(value)
+Function MyFunction(in number value)
     y = value + 10
-    Return y
 EndFunction
 ```
 
@@ -5022,7 +4989,6 @@ myLabel:
 ' myModule.bpm
 Function MyFunction()
     Goto myLabel
-    Return 0
 EndFunction
 ```
 
@@ -5033,7 +4999,6 @@ Function MyFunction()
     If condition Then
         ' код
     EndIf
-    Return 0
 EndFunction
 ```
 
@@ -5185,7 +5150,6 @@ A property cannot be declared inside a module method (function)
 ```
 Function MyFunction()
     number x
-    Return 0
 EndFunction
 ```
 
@@ -5194,14 +5158,13 @@ EndFunction
 number x
 
 Function MyFunction()
-    Dim y
-    Return 0
+    y = x
 EndFunction
 ```
 
 ---
 
-### Ошибка №151: В строке допустимо только одно ключевое слово — private
+### Ошибка №151: В строке допустимо только одно ключевое слово private
 
 **Что пишет компьютер (по-английски):**
 ```
@@ -5263,15 +5226,15 @@ value = Module1.x
 **Правильно:**
 ```
 ' module1.bpm
+Function GetX(out number a)
+    a = x
+EndFunction
+
 private
 number x
 
-Function GetX()
-    Return x
-EndFunction
-
 ' module2.bpm
-value = Module1.GetX()
+value = Module1.GetX(a)
 ```
 
 ---
@@ -5299,7 +5262,7 @@ Calling a private method is allowed only in the module owner of this method
 ' module1.bpm
 private
 Function Internal()
-    Return 5
+    x = 5
 EndFunction
 
 ' module2.bpm
@@ -5309,13 +5272,13 @@ value = Module1.Internal()
 **Правильно:**
 ```
 ' module1.bpm
-private
-Function Internal()
-    Return 5
+Function Public()
+    Internal()
 EndFunction
 
-Function Public()
-    Return Internal()
+private
+Function Internal()
+    x = 5
 EndFunction
 
 ' module2.bpm
@@ -5348,7 +5311,6 @@ number x
 
 Function MyFunction(x)
     y = x + 10
-    Return y
 EndFunction
 ```
 
@@ -5358,13 +5320,12 @@ number x
 
 Function MyFunction(value)
     y = value + 10
-    Return y
 EndFunction
 ```
 
 ---
 
-## 🆕 НОВЫЕ ОШИБКИ: BREAK, CONTINUE, RETURN (№155–№171)
+## ОШИБКИ: BREAK, CONTINUE, RETURN и остальные (№155–№171)
 
 ---
 
@@ -5566,354 +5527,7 @@ EndFunction
 
 ---
 
-### Ошибка №161: Отсутствует имя импортируемого файла модуля
-
-**Что пишет компьютер (по-английски):**
-```
-Missing imported module file name
-```
-
-**Что пишет компьютер (по-русски):**
-```
-Отсутствует имя импортируемого файла модуля
-```
-
-**Что это значит простыми словами:**  
-Вы пытаетесь импортировать модуль, но не указали имя файла.
-
-**Как исправить:**  
-1. Укажите имя файла в кавычках.
-
-**Неправильно:**
-```
-Import
-```
-
-**Правильно:**
-```
-Import "myModule.bpm"
-```
-
----
-
-### Ошибка №162: Импортируемые модули не могут содержать include
-
-**Что пишет компьютер (по-английски):**
-```
-Imported module files can not contain 'include' inclusions
-```
-
-**Что пишет компьютер (по-русски):**
-```
-Импортируемые файлы модулей не могут содержать включений include
-```
-
-**Что это значит простыми словами:**  
-Вы используете `Include` внутри импортируемого модуля.
-
-**Как исправить:**  
-1. Уберите `Include` из импортируемых модулей.
-
-**Неправильно:**
-```
-' myModule.bpm
-Include "helpers.bpi"
-```
-
-**Правильно:**
-```
-' main.bp
-Include "helpers.bpi"
-Import "myModule.bpm"
-```
-
----
-
-### Ошибка №163: Импортируемые модули не могут содержать folder
-
-**Что пишет компьютер (по-английски):**
-```
-Imported module files can not contain keyword 'folder'
-```
-
-**Что пишет компьютер (по-русски):**
-```
-Импортируемые файлы модулей не могут содержать ключевое слово folder
-```
-
-**Что это значит простыми словами:**  
-Вы используете `folder` внутри импортируемого модуля.
-
-**Как исправить:**  
-1. Уберите `folder` из импортируемых модулей.
-
-**Неправильно:**
-```
-' myModule.bpm
-folder "MyProject"
-```
-
-**Правильно:**
-```
-' main.bp
-folder "MyProject"
-Import "myModule.bpm"
-```
-
----
-
-### Ошибка №164: В файлах .bpm определение процедур недопустимо
-
-**Что пишет компьютер (по-английски):**
-```
-Invalid procedure definition in .bpm module files
-```
-
-**Что пишет компьютер (по-русски):**
-```
-В файлах модулей .bpm определение процедур недопустимо
-```
-
-**Что это значит простыми словами:**  
-Вы пытаетесь объявить процедуру в `.bpm` файле.
-
-**Как исправить:**  
-1. Используйте `Function` вместо `Sub` в `.bpm` файлах.
-
-**Неправильно:**
-```
-' myModule.bpm
-Sub MyProcedure
-    TextWindow.WriteLine("Привет")
-EndSub
-```
-
-**Правильно:**
-```
-' myModule.bpm
-Function MyFunction()
-    TextWindow.WriteLine("Привет")
-    Return 0
-EndFunction
-```
-
----
-
-### Ошибка №165: В .bpm допустимы только функции и свойства
-
-**Что пишет компьютер (по-английски):**
-```
-.bpm module files can only contain function definitions and properties
-```
-
-**Что пишет компьютер (по-русски):**
-```
-В файлах модулей .bpm допустимы только определения функций и свойств
-```
-
-**Что это значит простыми словами:**  
-В `.bpm` файле есть что-то кроме функций и свойств.
-
-**Как исправить:**  
-1. Уберите всё, кроме `Function` и свойств.
-
-**Неправильно:**
-```
-' myModule.bpm
-x = 5
-```
-
-**Правильно:**
-```
-' myModule.bpm
-Function MyFunction()
-    x = 5
-    Return 0
-EndFunction
-```
-
----
-
-### Ошибка №166: Нельзя использовать глобальные переменные в .bpm
-
-**Что пишет компьютер (по-английски):**
-```
-References to global variables can not be used in .bpm modules
-```
-
-**Что пишет компьютер (по-русски):**
-```
-Нельзя использовать ссылки на глобальные переменные в модулях .bpm
-```
-
-**Что это значит простыми словами:**  
-Вы пытаетесь использовать глобальную переменную в `.bpm` файле.
-
-**Как исправить:**  
-1. Передавайте значения через параметры.
-
-**Неправильно:**
-```
-' main.bp
-global x = 5
-
-' myModule.bpm
-Function MyFunction()
-    y = x + 10
-    Return y
-EndFunction
-```
-
-**Правильно:**
-```
-' main.bp
-global x = 5
-
-' myModule.bpm
-Function MyFunction(value)
-    y = value + 10
-    Return y
-EndFunction
-```
-
----
-
-### Ошибка №167: Нельзя использовать глобальные метки в .bpm
-
-**Что пишет компьютер (по-английски):**
-```
-References to global goto labels can not be used in .bpm modules
-```
-
-**Что пишет компьютер (по-русски):**
-```
-Нельзя использовать ссылки на глобальные метки перехода в модулях .bpm
-```
-
-**Что это значит простыми словами:**  
-Вы пытаетесь использовать `Goto` с меткой из другого файла.
-
-**Как исправить:**  
-1. Не используйте `Goto` в `.bpm` файлах.
-
-**Неправильно:**
-```
-' main.bp
-myLabel:
-
-' myModule.bpm
-Function MyFunction()
-    Goto myLabel
-    Return 0
-EndFunction
-```
-
-**Правильно:**
-```
-' myModule.bpm
-Function MyFunction()
-    If condition Then
-        ' код
-    EndIf
-    Return 0
-EndFunction
-```
-
----
-
-### Ошибка №168: Свойство модуля должно состоять из типа и имени
-
-**Что пишет компьютер (по-английски):**
-```
-A module property declaration must only consist of the property type and name
-```
-
-**Что пишет компьютер (по-русски):**
-```
-Объявление свойства модуля должно состоять только из типа и имени свойства
-```
-
-**Что это значит простыми словами:**  
-Вы неправильно объявили свойство модуля.
-
-**Как исправить:**  
-1. Формат: `тип имя`.
-
-**Неправильно:**
-```
-Property myProperty
-number myProperty = 5
-```
-
-**Правильно:**
-```
-number myProperty
-```
-
----
-
-### Ошибка №169: Свойство модуля: тип и имя
-
-**Что пишет компьютер (по-английски):**
-```
-A module property must consist of its type and name
-```
-
-**Что пишет компьютер (по-русски):**
-```
-Свойство модуля должно состоять из его типа и имени
-```
-
-**Что это значит простыми словами:**  
-Вы забыли указать тип или имя свойства.
-
-**Как исправить:**  
-1. Всегда указывайте тип и имя.
-
-**Неправильно:**
-```
-Property
-myProperty
-```
-
-**Правильно:**
-```
-number myProperty
-```
-
----
-
-### Ошибка №170: Тип свойства может быть только number, number[], string, string[]
-
-**Что пишет компьютер (по-английски):**
-```
-A property can only be of number, number[], string, or string[] type
-```
-
-**Что пишет компьютер (по-русски):**
-```
-Тип свойства может быть только number, number[], string, или string[]
-```
-
-**Что это значит простыми словами:**  
-Вы указали неправильный тип для свойства.
-
-**Как исправить:**  
-1. Используйте только разрешённые типы.
-
-**Неправильно:**
-```
-boolean flag
-```
-
-**Правильно:**
-```
-number flag
-```
-
----
-
-### Ошибка №171: Свойство с таким именем не определено в модуле
+### Ошибка №161: Свойство с таким именем не определено в модуле
 
 **Что пишет компьютер (по-английски):**
 ```
@@ -5955,7 +5569,7 @@ value = Module1.y   ' свойство y объявлено
 
 # КОНЕЦ СПРАВОЧНИКА
 
-**Всего ошибок:** 171 
+**Всего ошибок:** 161 
 **Дата создания:** 08.2026  
 
 Справочник составлен на основе сообщений компилятора Clever (Small Basic Plus).  
